@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Page</title>
+  <style>
+    body {
+      background-image: url('contact.jpg');
+    }
+    h1 {
+      color: blue;
+      text-align: center;
+    }
+    .panel-body {
+      width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column; /* Align children vertically */
+      align-items: center; /* Center children horizontally */
+    }
+    .form-control {
+      margin-bottom: 10px;
+      width: 30%;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    label {
+      font-weight: bold;
+      text-align: center; /* Center the label text */
+    }
+    .centered {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+   
+}
+
+    input,
+    textarea {
+      display: block;
+      text-align:center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gender-group {
+      display: flex;
+      justify-content: center; /* Center the gender options horizontally */
+    }
+    button {
+      background-color:black;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    .btn-container {
+      text-align: center; /* Center the button within its container */
+    }
+   
+  </style>
+</head>
+<body>
+  <h1>Contact Form</h1>
+  <div class="panel-body">
+    <form action="connect.php" method="post">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          name="firstName"
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          name="lastName"
+        />
+      </div>
+      <div class="gender-group">
+        <div class="form-group">
+          <label for="male" class="radio-inline">
+            <input
+              type="radio"
+              name="gender"
+              value="m"
+              id="male"
+            />Male
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="female" class="radio-inline">
+            <input
+              type="radio"
+              name="gender"
+              value="f"
+              id="female"
+            />Female
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="others" class="radio-inline">
+            <input
+              type="radio"
+              name="gender"
+              value="o"
+              id="others"
+            />Others
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+        />
+      </div>
+      <div class="form-group">
+        <label for="number">Phone Number</label>
+        <input
+          type="number"
+          class="form-control"
+          id="number"
+          name="number"
+        />
+      </div class="form-group">
+      <div class="centered">
+      <label for="message">Message</label>
+      <textarea  type= "message" class="form-control"  id="message" name="message" rows="5" cols="100">
+      </textarea><br><br>
+      </div>
+      <div class="btn-container">
+        <button>
+        <input type="submit" class="btn btn-primary" /></button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
